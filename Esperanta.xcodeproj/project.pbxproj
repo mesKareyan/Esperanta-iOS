@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1932501201FD6B79F58F0C44 /* Pods_Esperanta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6924F45779F7A29E196EF765 /* Pods_Esperanta.framework */; };
+		71B15AFC30DCB1F2998C9066 /* Pods_EsperantaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D27B854BE8B4B7E675F4B3 /* Pods_EsperantaUITests.framework */; };
+		78C63DB68F0E3C450FB59267 /* Pods_EsperantaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66AA0E554D81519CC8B929F9 /* Pods_EsperantaTests.framework */; };
 		B2BA394F1FAEDC8000B16362 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA394E1FAEDC8000B16362 /* AppDelegate.swift */; };
 		B2BA39511FAEDC8000B16362 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA39501FAEDC8000B16362 /* FirstViewController.swift */; };
 		B2BA39531FAEDC8000B16362 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA39521FAEDC8000B16362 /* SecondViewController.swift */; };
@@ -39,6 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		206720F146D357131994B08E /* Pods-EsperantaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EsperantaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EsperantaTests/Pods-EsperantaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2FBFFA53513CE0D012460B60 /* Pods-Esperanta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Esperanta.release.xcconfig"; path = "Pods/Target Support Files/Pods-Esperanta/Pods-Esperanta.release.xcconfig"; sourceTree = "<group>"; };
+		66AA0E554D81519CC8B929F9 /* Pods_EsperantaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EsperantaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6924F45779F7A29E196EF765 /* Pods_Esperanta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Esperanta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D1F4405FE87C78271D3C0B7 /* Pods-EsperantaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EsperantaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EsperantaTests/Pods-EsperantaTests.release.xcconfig"; sourceTree = "<group>"; };
+		A2D27B854BE8B4B7E675F4B3 /* Pods_EsperantaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EsperantaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2BA394B1FAEDC8000B16362 /* Esperanta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Esperanta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2BA394E1FAEDC8000B16362 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2BA39501FAEDC8000B16362 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +66,9 @@
 		B2BA39831FAEF83D00B16362 /* SideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideViewController.swift; sourceTree = "<group>"; };
 		B2BA39851FAF002A00B16362 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		B2BA39871FAF017500B16362 /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
+		E306CEE96F8B1D092981154B /* Pods-EsperantaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EsperantaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EsperantaUITests/Pods-EsperantaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F1FACA0D3CE849F9365BCA81 /* Pods-EsperantaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EsperantaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EsperantaUITests/Pods-EsperantaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F470559A85D8E0D803F9985A /* Pods-Esperanta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Esperanta.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Esperanta/Pods-Esperanta.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1932501201FD6B79F58F0C44 /* Pods_Esperanta.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78C63DB68F0E3C450FB59267 /* Pods_EsperantaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,12 +92,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71B15AFC30DCB1F2998C9066 /* Pods_EsperantaUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		78A62C7A03BFB1B1D33CB581 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6924F45779F7A29E196EF765 /* Pods_Esperanta.framework */,
+				66AA0E554D81519CC8B929F9 /* Pods_EsperantaTests.framework */,
+				A2D27B854BE8B4B7E675F4B3 /* Pods_EsperantaUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B2BA39421FAEDC8000B16362 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +116,8 @@
 				B2BA39641FAEDC8000B16362 /* EsperantaTests */,
 				B2BA396F1FAEDC8000B16362 /* EsperantaUITests */,
 				B2BA394C1FAEDC8000B16362 /* Products */,
+				B8C45531EEB1FFA256C0EA44 /* Pods */,
+				78A62C7A03BFB1B1D33CB581 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,6 +191,19 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		B8C45531EEB1FFA256C0EA44 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F470559A85D8E0D803F9985A /* Pods-Esperanta.debug.xcconfig */,
+				2FBFFA53513CE0D012460B60 /* Pods-Esperanta.release.xcconfig */,
+				206720F146D357131994B08E /* Pods-EsperantaTests.debug.xcconfig */,
+				6D1F4405FE87C78271D3C0B7 /* Pods-EsperantaTests.release.xcconfig */,
+				E306CEE96F8B1D092981154B /* Pods-EsperantaUITests.debug.xcconfig */,
+				F1FACA0D3CE849F9365BCA81 /* Pods-EsperantaUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -171,9 +211,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B2BA39751FAEDC8000B16362 /* Build configuration list for PBXNativeTarget "Esperanta" */;
 			buildPhases = (
+				296413154B65B6DB86401C36 /* [CP] Check Pods Manifest.lock */,
 				B2BA39471FAEDC8000B16362 /* Sources */,
 				B2BA39481FAEDC8000B16362 /* Frameworks */,
 				B2BA39491FAEDC8000B16362 /* Resources */,
+				7384B648EE5C41E88AAB8688 /* [CP] Embed Pods Frameworks */,
+				0A441CB8064A3439DA6EE6B9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -188,9 +231,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B2BA39781FAEDC8000B16362 /* Build configuration list for PBXNativeTarget "EsperantaTests" */;
 			buildPhases = (
+				20CF074D4AD1C0AA947FA999 /* [CP] Check Pods Manifest.lock */,
 				B2BA395D1FAEDC8000B16362 /* Sources */,
 				B2BA395E1FAEDC8000B16362 /* Frameworks */,
 				B2BA395F1FAEDC8000B16362 /* Resources */,
+				98EF0D6408090A4ED6EB67E9 /* [CP] Embed Pods Frameworks */,
+				FBA34D3322EA75BDB4213E81 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,9 +252,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B2BA397B1FAEDC8000B16362 /* Build configuration list for PBXNativeTarget "EsperantaUITests" */;
 			buildPhases = (
+				9AF6AB943F1484FBDCDD76F8 /* [CP] Check Pods Manifest.lock */,
 				B2BA39681FAEDC8000B16362 /* Sources */,
 				B2BA39691FAEDC8000B16362 /* Frameworks */,
 				B2BA396A1FAEDC8000B16362 /* Resources */,
+				5476699F0AA76E544AE90082 /* [CP] Embed Pods Frameworks */,
+				E6695062FB21AD1F8424D8DA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -292,6 +341,166 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A441CB8064A3439DA6EE6B9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Esperanta/Pods-Esperanta-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		20CF074D4AD1C0AA947FA999 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EsperantaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		296413154B65B6DB86401C36 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Esperanta-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5476699F0AA76E544AE90082 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EsperantaUITests/Pods-EsperantaUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7384B648EE5C41E88AAB8688 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Esperanta/Pods-Esperanta-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Esperanta/Pods-Esperanta-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98EF0D6408090A4ED6EB67E9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EsperantaTests/Pods-EsperantaTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9AF6AB943F1484FBDCDD76F8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EsperantaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6695062FB21AD1F8424D8DA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EsperantaUITests/Pods-EsperantaUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBA34D3322EA75BDB4213E81 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EsperantaTests/Pods-EsperantaTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B2BA39471FAEDC8000B16362 /* Sources */ = {
@@ -468,6 +677,7 @@
 		};
 		B2BA39761FAEDC8000B16362 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F470559A85D8E0D803F9985A /* Pods-Esperanta.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -484,6 +694,7 @@
 		};
 		B2BA39771FAEDC8000B16362 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FBFFA53513CE0D012460B60 /* Pods-Esperanta.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -500,6 +711,7 @@
 		};
 		B2BA39791FAEDC8000B16362 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 206720F146D357131994B08E /* Pods-EsperantaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -517,6 +729,7 @@
 		};
 		B2BA397A1FAEDC8000B16362 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D1F4405FE87C78271D3C0B7 /* Pods-EsperantaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -534,6 +747,7 @@
 		};
 		B2BA397C1FAEDC8000B16362 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E306CEE96F8B1D092981154B /* Pods-EsperantaUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -550,6 +764,7 @@
 		};
 		B2BA397D1FAEDC8000B16362 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1FACA0D3CE849F9365BCA81 /* Pods-EsperantaUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
