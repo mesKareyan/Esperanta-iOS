@@ -1,0 +1,148 @@
+//
+//  MainWrapperViewController.swift
+//  Esperanta
+//
+//  Created by Mesrop Kareyan on 11/5/17.
+//  Copyright © 2017 mesrop. All rights reserved.
+//
+
+import UIKit
+
+class MainWrapperViewController: UIViewController {
+
+    @IBOutlet weak var sideViewSideConstraint: NSLayoutConstraint!
+    
+    weak var sideMenu: SideViewController!
+    weak var mainTab: MainTabBarController!
+    
+    @IBOutlet weak var mainView: UIView!
+    @IBOutlet weak var sideView: UIView!
+    var tap: UITapGestureRecognizer!
+    
+    var isSideMenuHidden = true
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configureUI()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        guard let identifier = segue.identifier else {
+            return
+        }
+        if identifier == "sideMenu" {
+            let sideMenu = (segue.destination as! UINavigationController).viewControllers.first as! SideViewController
+            sideMenu.wrapper = self
+            self.sideMenu = sideMenu
+        } else if identifier == "mainTabBar" {
+            let mainTab = (segue.destination as! UINavigationController).viewControllers.first as! MainTabBarController
+            mainTab.wrapper = self
+            self.mainTab = mainTab
+        }
+    }
+
+}
+
+extension MainWrapperViewController {
+    
+    func configureUI(){
+        sideViewSideConstraint.constant = -sideView.bounds.width
+        
+        let pan = UIPanGestureRecognizer(target: self, action: #selector(handleLeftViewSwipe(recognizer:)))
+        sideView.addGestureRecognizer(pan)
+        
+        tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+        view.addGestureRecognizer(tap)
+        tap.cancelsTouchesInView = false
+        
+        let leftEdgePan = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(handleLeftViewEdgePan(recognizer:)))
+        leftEdgePan.edges = .left
+        view.addGestureRecognizer(leftEdgePan)
+        
+        
+    }
+    
+    //MARK: Side menu
+    @objc func handleLeftViewSwipe(recognizer: UIPanGestureRecognizer) {
+        let translation = recognizer.translation(in: sideView)
+        var xConstant = translation.x
+        var animationDuration = 0.1
+        if xConstant > 0 {
+            xConstant = 0
+        }
+        switch recognizer.state {
+        case .cancelled, .failed, .ended:
+            //hide left view if needed
+            if xConstant < -50 {
+                hideSideMenu()
+                return
+            } else {
+                xConstant = 0
+                animationDuration = 0.2
+            }
+        default:
+            break
+        }
+        sideViewSideConstraint.constant = xConstant
+        UIView.animate(withDuration: animationDuration, delay: 0.0, options: .curveEaseOut, animations: {
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+    }
+    
+    @objc func handleLeftViewEdgePan(recognizer:
+                                    UIScreenEdgePanGestureRecognizer) {
+        let translation = recognizer.translation(in: sideView)
+        var xConstant = translation.x - sideView.bounds.width
+        var animationDuration = 0.1
+        if xConstant >  0 {
+            xConstant = 0
+        }
+        switch recognizer.state {
+        case .cancelled, .failed, .ended:
+            //hide left view if needed
+            if xConstant < -50
+                && recognizer.velocity(in: sideView).x > 0 {
+                showSideMenu()
+                return
+            } else {
+                xConstant = 0
+                animationDuration = 0.2
+            }
+        default:
+            break
+        }
+        sideViewSideConstraint.constant = xConstant
+        UIView.animate(withDuration: animationDuration, delay: 0.0, options: .curveEaseOut, animations: {
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+    }
+    
+    @objc func hideSideMenu(){
+        isSideMenuHidden = true
+        sideViewSideConstraint.constant = -sideView.bounds.width
+        UIView.animate(withDuration: 0.4, delay: 0.0, options: .curveEaseOut, animations: {
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+    }
+    
+    @objc func showSideMenu(){
+        isSideMenuHidden = false
+        sideViewSideConstraint.constant = 0
+        UIView.animate(withDuration: 0.4, delay: 0.0, options: .curveEaseOut, animations: {
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+    }
+    
+    func toggleSideMenu(){
+        isSideMenuHidden ? showSideMenu() : hideSideMenu()
+    }
+    
+    @objc func handleTap(_ tap: UITapGestureRecognizer) {
+        let tapView = tap.view
+        let location = tap.location(in: tapView)
+        if !sideView.frame.contains(location) {
+            hideSideMenu()
+        }
+    }
+}

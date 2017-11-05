@@ -15,6 +15,10 @@
 		B2BA395B1FAEDC8000B16362 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2BA39591FAEDC8000B16362 /* LaunchScreen.storyboard */; };
 		B2BA39661FAEDC8000B16362 /* EsperantaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA39651FAEDC8000B16362 /* EsperantaTests.swift */; };
 		B2BA39711FAEDC8000B16362 /* EsperantaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA39701FAEDC8000B16362 /* EsperantaUITests.swift */; };
+		B2BA39821FAEF76600B16362 /* MainWrapperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA39811FAEF76600B16362 /* MainWrapperViewController.swift */; };
+		B2BA39841FAEF83D00B16362 /* SideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA39831FAEF83D00B16362 /* SideViewController.swift */; };
+		B2BA39861FAF002A00B16362 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA39851FAF002A00B16362 /* MainTabBarController.swift */; };
+		B2BA39881FAF017500B16362 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA39871FAF017500B16362 /* SideMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		B2BA396C1FAEDC8000B16362 /* EsperantaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EsperantaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2BA39701FAEDC8000B16362 /* EsperantaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsperantaUITests.swift; sourceTree = "<group>"; };
 		B2BA39721FAEDC8000B16362 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2BA39811FAEF76600B16362 /* MainWrapperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWrapperViewController.swift; sourceTree = "<group>"; };
+		B2BA39831FAEF83D00B16362 /* SideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideViewController.swift; sourceTree = "<group>"; };
+		B2BA39851FAF002A00B16362 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		B2BA39871FAF017500B16362 /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +107,11 @@
 		B2BA394D1FAEDC8000B16362 /* Esperanta */ = {
 			isa = PBXGroup;
 			children = (
+				B2BA39801FAEEF1D00B16362 /* Resources */,
+				B2BA397F1FAEEED900B16362 /* View */,
+				B2BA397E1FAEEED100B16362 /* Controller */,
 				B2BA394E1FAEDC8000B16362 /* AppDelegate.swift */,
-				B2BA39501FAEDC8000B16362 /* FirstViewController.swift */,
-				B2BA39521FAEDC8000B16362 /* SecondViewController.swift */,
 				B2BA39541FAEDC8000B16362 /* Main.storyboard */,
-				B2BA39571FAEDC8000B16362 /* Assets.xcassets */,
 				B2BA39591FAEDC8000B16362 /* LaunchScreen.storyboard */,
 				B2BA395C1FAEDC8000B16362 /* Info.plist */,
 			);
@@ -126,6 +134,34 @@
 				B2BA39721FAEDC8000B16362 /* Info.plist */,
 			);
 			path = EsperantaUITests;
+			sourceTree = "<group>";
+		};
+		B2BA397E1FAEEED100B16362 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B2BA39501FAEDC8000B16362 /* FirstViewController.swift */,
+				B2BA39521FAEDC8000B16362 /* SecondViewController.swift */,
+				B2BA39811FAEF76600B16362 /* MainWrapperViewController.swift */,
+				B2BA39831FAEF83D00B16362 /* SideViewController.swift */,
+				B2BA39851FAF002A00B16362 /* MainTabBarController.swift */,
+				B2BA39871FAF017500B16362 /* SideMenu.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B2BA397F1FAEEED900B16362 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B2BA39801FAEEF1D00B16362 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B2BA39571FAEDC8000B16362 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +298,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2BA39841FAEF83D00B16362 /* SideViewController.swift in Sources */,
 				B2BA39531FAEDC8000B16362 /* SecondViewController.swift in Sources */,
+				B2BA39861FAF002A00B16362 /* MainTabBarController.swift in Sources */,
+				B2BA39881FAF017500B16362 /* SideMenu.swift in Sources */,
 				B2BA394F1FAEDC8000B16362 /* AppDelegate.swift in Sources */,
 				B2BA39511FAEDC8000B16362 /* FirstViewController.swift in Sources */,
+				B2BA39821FAEF76600B16362 /* MainWrapperViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,8 +471,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F4KF659SS5;
+				DEVELOPMENT_TEAM = MBH24V7SXR;
 				INFOPLIST_FILE = Esperanta/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mesrop.Esperanta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -446,8 +487,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F4KF659SS5;
+				DEVELOPMENT_TEAM = MBH24V7SXR;
 				INFOPLIST_FILE = Esperanta/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mesrop.Esperanta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
