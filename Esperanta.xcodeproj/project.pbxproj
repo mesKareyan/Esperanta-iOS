@@ -10,9 +10,17 @@
 		1932501201FD6B79F58F0C44 /* Pods_Esperanta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6924F45779F7A29E196EF765 /* Pods_Esperanta.framework */; };
 		71B15AFC30DCB1F2998C9066 /* Pods_EsperantaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D27B854BE8B4B7E675F4B3 /* Pods_EsperantaUITests.framework */; };
 		78C63DB68F0E3C450FB59267 /* Pods_EsperantaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66AA0E554D81519CC8B929F9 /* Pods_EsperantaTests.framework */; };
+		B225D2F21FB0DA6A00A4BB47 /* LoginVC+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B225D2EF1FB0DA6A00A4BB47 /* LoginVC+Firebase.swift */; };
+		B225D2F31FB0DA6A00A4BB47 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B225D2F01FB0DA6A00A4BB47 /* LoginViewController.swift */; };
+		B225D2F41FB0DA6A00A4BB47 /* EmailVerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B225D2F11FB0DA6A00A4BB47 /* EmailVerifyViewController.swift */; };
+		B225D2F81FB0DB6A00A4BB47 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B225D2F51FB0DB6900A4BB47 /* UserManager.swift */; };
+		B225D2F91FB0DB6A00A4BB47 /* FirebaseDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B225D2F61FB0DB6900A4BB47 /* FirebaseDatabaseManager.swift */; };
+		B225D2FA1FB0DB6A00A4BB47 /* FirebaseStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B225D2F71FB0DB6900A4BB47 /* FirebaseStorageManager.swift */; };
+		B225D2FC1FB0DBB500A4BB47 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B225D2FB1FB0DBB500A4BB47 /* UserData.swift */; };
+		B225D3001FB0E4E100A4BB47 /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B225D2FF1FB0E4E100A4BB47 /* PlacesViewController.swift */; };
 		B2BA394F1FAEDC8000B16362 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA394E1FAEDC8000B16362 /* AppDelegate.swift */; };
-		B2BA39511FAEDC8000B16362 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA39501FAEDC8000B16362 /* FirstViewController.swift */; };
-		B2BA39531FAEDC8000B16362 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA39521FAEDC8000B16362 /* SecondViewController.swift */; };
+		B2BA39511FAEDC8000B16362 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA39501FAEDC8000B16362 /* ChatListViewController.swift */; };
+		B2BA39531FAEDC8000B16362 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA39521FAEDC8000B16362 /* UserListViewController.swift */; };
 		B2BA39561FAEDC8000B16362 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2BA39541FAEDC8000B16362 /* Main.storyboard */; };
 		B2BA39581FAEDC8000B16362 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2BA39571FAEDC8000B16362 /* Assets.xcassets */; };
 		B2BA395B1FAEDC8000B16362 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2BA39591FAEDC8000B16362 /* LaunchScreen.storyboard */; };
@@ -22,6 +30,12 @@
 		B2BA39841FAEF83D00B16362 /* SideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA39831FAEF83D00B16362 /* SideViewController.swift */; };
 		B2BA39861FAF002A00B16362 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA39851FAF002A00B16362 /* MainTabBarController.swift */; };
 		B2BA39881FAF017500B16362 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA39871FAF017500B16362 /* SideMenu.swift */; };
+		B2D49DE21FAF79F900C78B76 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2D49DE11FAF79F900C78B76 /* GoogleService-Info.plist */; };
+		B2D49DE51FAF7C4900C78B76 /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = B2D49DE31FAF7C4800C78B76 /* Background.png */; };
+		B2D49DE61FAF7C4900C78B76 /* orangeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = B2D49DE41FAF7C4900C78B76 /* orangeButton.png */; };
+		B2D49DF31FAF7EF400C78B76 /* TypeAliesies.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D49DF21FAF7EF400C78B76 /* TypeAliesies.swift */; };
+		B2D49DF61FAF7F6500C78B76 /* UIKit + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D49DF51FAF7F6500C78B76 /* UIKit + Extensions.swift */; };
+		B2D49E001FAF8C0A00C78B76 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D49DFE1FAF8C0A00C78B76 /* ChatViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,10 +62,18 @@
 		6924F45779F7A29E196EF765 /* Pods_Esperanta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Esperanta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D1F4405FE87C78271D3C0B7 /* Pods-EsperantaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EsperantaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EsperantaTests/Pods-EsperantaTests.release.xcconfig"; sourceTree = "<group>"; };
 		A2D27B854BE8B4B7E675F4B3 /* Pods_EsperantaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EsperantaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B225D2EF1FB0DA6A00A4BB47 /* LoginVC+Firebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginVC+Firebase.swift"; sourceTree = "<group>"; };
+		B225D2F01FB0DA6A00A4BB47 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B225D2F11FB0DA6A00A4BB47 /* EmailVerifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailVerifyViewController.swift; sourceTree = "<group>"; };
+		B225D2F51FB0DB6900A4BB47 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		B225D2F61FB0DB6900A4BB47 /* FirebaseDatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseDatabaseManager.swift; sourceTree = "<group>"; };
+		B225D2F71FB0DB6900A4BB47 /* FirebaseStorageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseStorageManager.swift; sourceTree = "<group>"; };
+		B225D2FB1FB0DBB500A4BB47 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		B225D2FF1FB0E4E100A4BB47 /* PlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
 		B2BA394B1FAEDC8000B16362 /* Esperanta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Esperanta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2BA394E1FAEDC8000B16362 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B2BA39501FAEDC8000B16362 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		B2BA39521FAEDC8000B16362 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		B2BA39501FAEDC8000B16362 /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
+		B2BA39521FAEDC8000B16362 /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
 		B2BA39551FAEDC8000B16362 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B2BA39571FAEDC8000B16362 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2BA395A1FAEDC8000B16362 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -66,6 +88,13 @@
 		B2BA39831FAEF83D00B16362 /* SideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideViewController.swift; sourceTree = "<group>"; };
 		B2BA39851FAF002A00B16362 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		B2BA39871FAF017500B16362 /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
+		B2D49DE11FAF79F900C78B76 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B2D49DE31FAF7C4800C78B76 /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
+		B2D49DE41FAF7C4900C78B76 /* orangeButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orangeButton.png; sourceTree = "<group>"; };
+		B2D49DF21FAF7EF400C78B76 /* TypeAliesies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAliesies.swift; sourceTree = "<group>"; };
+		B2D49DF51FAF7F6500C78B76 /* UIKit + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit + Extensions.swift"; sourceTree = "<group>"; };
+		B2D49DFE1FAF8C0A00C78B76 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		B2D4A46E1FAFA82E00AD60AE /* Esperanta-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Esperanta-Bridging-Header.h"; sourceTree = "<group>"; };
 		E306CEE96F8B1D092981154B /* Pods-EsperantaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EsperantaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EsperantaUITests/Pods-EsperantaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F1FACA0D3CE849F9365BCA81 /* Pods-EsperantaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EsperantaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EsperantaUITests/Pods-EsperantaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F470559A85D8E0D803F9985A /* Pods-Esperanta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Esperanta.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Esperanta/Pods-Esperanta.debug.xcconfig"; sourceTree = "<group>"; };
@@ -109,6 +138,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B225D2FD1FB0E49400A4BB47 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				B2BA39501FAEDC8000B16362 /* ChatListViewController.swift */,
+				B2D49DFE1FAF8C0A00C78B76 /* ChatViewController.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		B225D2FE1FB0E4C700A4BB47 /* UserList */ = {
+			isa = PBXGroup;
+			children = (
+				B2BA39521FAEDC8000B16362 /* UserListViewController.swift */,
+			);
+			path = UserList;
+			sourceTree = "<group>";
+		};
+		B225D3011FB0E4EF00A4BB47 /* Places */ = {
+			isa = PBXGroup;
+			children = (
+				B225D2FF1FB0E4E100A4BB47 /* PlacesViewController.swift */,
+			);
+			path = Places;
+			sourceTree = "<group>";
+		};
 		B2BA39421FAEDC8000B16362 = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +188,9 @@
 		B2BA394D1FAEDC8000B16362 /* Esperanta */ = {
 			isa = PBXGroup;
 			children = (
+				B225D2FB1FB0DBB500A4BB47 /* UserData.swift */,
+				B2D49DF41FAF7F2C00C78B76 /* Helpers */,
+				B2D49DEE1FAF7E8300C78B76 /* Managers */,
 				B2BA39801FAEEF1D00B16362 /* Resources */,
 				B2BA397F1FAEEED900B16362 /* View */,
 				B2BA397E1FAEEED100B16362 /* Controller */,
@@ -141,6 +198,8 @@
 				B2BA39541FAEDC8000B16362 /* Main.storyboard */,
 				B2BA39591FAEDC8000B16362 /* LaunchScreen.storyboard */,
 				B2BA395C1FAEDC8000B16362 /* Info.plist */,
+				B2D49DE11FAF79F900C78B76 /* GoogleService-Info.plist */,
+				B2D4A46E1FAFA82E00AD60AE /* Esperanta-Bridging-Header.h */,
 			);
 			path = Esperanta;
 			sourceTree = "<group>";
@@ -166,8 +225,10 @@
 		B2BA397E1FAEEED100B16362 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				B2BA39501FAEDC8000B16362 /* FirstViewController.swift */,
-				B2BA39521FAEDC8000B16362 /* SecondViewController.swift */,
+				B2D49DE71FAF7CA100C78B76 /* Login */,
+				B225D2FD1FB0E49400A4BB47 /* Chat */,
+				B225D2FE1FB0E4C700A4BB47 /* UserList */,
+				B225D3011FB0E4EF00A4BB47 /* Places */,
 				B2BA39811FAEF76600B16362 /* MainWrapperViewController.swift */,
 				B2BA39831FAEF83D00B16362 /* SideViewController.swift */,
 				B2BA39851FAF002A00B16362 /* MainTabBarController.swift */,
@@ -187,8 +248,47 @@
 			isa = PBXGroup;
 			children = (
 				B2BA39571FAEDC8000B16362 /* Assets.xcassets */,
+				B2D49DE31FAF7C4800C78B76 /* Background.png */,
+				B2D49DE41FAF7C4900C78B76 /* orangeButton.png */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		B2D49DE71FAF7CA100C78B76 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B225D2F11FB0DA6A00A4BB47 /* EmailVerifyViewController.swift */,
+				B225D2EF1FB0DA6A00A4BB47 /* LoginVC+Firebase.swift */,
+				B225D2F01FB0DA6A00A4BB47 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		B2D49DEE1FAF7E8300C78B76 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				B225D2F61FB0DB6900A4BB47 /* FirebaseDatabaseManager.swift */,
+				B225D2F71FB0DB6900A4BB47 /* FirebaseStorageManager.swift */,
+				B225D2F51FB0DB6900A4BB47 /* UserManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		B2D49DF11FAF7EAA00C78B76 /* Aliases */ = {
+			isa = PBXGroup;
+			children = (
+				B2D49DF21FAF7EF400C78B76 /* TypeAliesies.swift */,
+			);
+			path = Aliases;
+			sourceTree = "<group>";
+		};
+		B2D49DF41FAF7F2C00C78B76 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B2D49DF11FAF7EAA00C78B76 /* Aliases */,
+				B2D49DF51FAF7F6500C78B76 /* UIKit + Extensions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		B8C45531EEB1FFA256C0EA44 /* Pods */ = {
@@ -321,8 +421,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2BA395B1FAEDC8000B16362 /* LaunchScreen.storyboard in Resources */,
+				B2D49DE21FAF79F900C78B76 /* GoogleService-Info.plist in Resources */,
+				B2D49DE51FAF7C4900C78B76 /* Background.png in Resources */,
 				B2BA39581FAEDC8000B16362 /* Assets.xcassets in Resources */,
 				B2BA39561FAEDC8000B16362 /* Main.storyboard in Resources */,
+				B2D49DE61FAF7C4900C78B76 /* orangeButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,19 +519,29 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Esperanta/Pods-Esperanta-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/APESuperHUD/APESuperHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/APESuperHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -507,13 +620,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B225D2F31FB0DA6A00A4BB47 /* LoginViewController.swift in Sources */,
+				B225D2F41FB0DA6A00A4BB47 /* EmailVerifyViewController.swift in Sources */,
+				B225D2F81FB0DB6A00A4BB47 /* UserManager.swift in Sources */,
 				B2BA39841FAEF83D00B16362 /* SideViewController.swift in Sources */,
-				B2BA39531FAEDC8000B16362 /* SecondViewController.swift in Sources */,
+				B2D49E001FAF8C0A00C78B76 /* ChatViewController.swift in Sources */,
+				B225D3001FB0E4E100A4BB47 /* PlacesViewController.swift in Sources */,
+				B2BA39531FAEDC8000B16362 /* UserListViewController.swift in Sources */,
 				B2BA39861FAF002A00B16362 /* MainTabBarController.swift in Sources */,
 				B2BA39881FAF017500B16362 /* SideMenu.swift in Sources */,
+				B225D2FA1FB0DB6A00A4BB47 /* FirebaseStorageManager.swift in Sources */,
 				B2BA394F1FAEDC8000B16362 /* AppDelegate.swift in Sources */,
-				B2BA39511FAEDC8000B16362 /* FirstViewController.swift in Sources */,
+				B2D49DF31FAF7EF400C78B76 /* TypeAliesies.swift in Sources */,
+				B2BA39511FAEDC8000B16362 /* ChatListViewController.swift in Sources */,
+				B2D49DF61FAF7F6500C78B76 /* UIKit + Extensions.swift in Sources */,
+				B225D2FC1FB0DBB500A4BB47 /* UserData.swift in Sources */,
+				B225D2F91FB0DB6A00A4BB47 /* FirebaseDatabaseManager.swift in Sources */,
 				B2BA39821FAEF76600B16362 /* MainWrapperViewController.swift in Sources */,
+				B225D2F21FB0DA6A00A4BB47 /* LoginVC+Firebase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -685,8 +809,10 @@
 				INFOPLIST_FILE = Esperanta/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = mesrop.Esperanta;
+				PRODUCT_BUNDLE_IDENTIFIER = com.esperanta.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Esperanta/Esperanta-Bridging-Header.h";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -702,8 +828,10 @@
 				INFOPLIST_FILE = Esperanta/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = mesrop.Esperanta;
+				PRODUCT_BUNDLE_IDENTIFIER = com.esperanta.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Esperanta/Esperanta-Bridging-Header.h";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
