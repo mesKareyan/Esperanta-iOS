@@ -17,6 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
         window?.tintColor = UIColor.esperantaGreen
+        let textAttributes = [NSAttributedStringKey.foregroundColor : UIColor.esperantaGreen]
+        if #available(iOS 11.0, *) {
+            UINavigationBar.appearance().largeTitleTextAttributes = textAttributes
+        } else {
+            UINavigationBar.appearance().titleTextAttributes  = textAttributes
+        }
         return true
     }
 

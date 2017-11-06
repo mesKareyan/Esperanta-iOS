@@ -4,6 +4,7 @@ import JSQMessagesViewController
 class ChatViewController: JSQMessagesViewController {
     
     var messages = [JSQMessage]()
+    private var navTextAttributes: [NSAttributedStringKey : Any]?
     //JSQMessages UI
     private lazy var outgoingBubbleImageView: JSQMessagesBubbleImage = {
         let bubbleImageFactory = JSQMessagesBubbleImageFactory()
@@ -31,6 +32,14 @@ class ChatViewController: JSQMessagesViewController {
         inputToolbar.contentView.rightBarButtonItem = button
         inputToolbar.contentView.leftBarButtonItem = nil
         inputToolbar.contentView.textView.layer.cornerRadius = inputToolbar.contentView.textView.bounds.height / 2
+        //nav bar
+        self.title = "Mesrop"
+        let search = UISearchController(searchResultsController: nil)
+        if #available(iOS 11.0, *) {
+            self.navigationItem.searchController = search
+        } else {
+            // Fallback on earlier versions
+        }
     }
     
     override func viewDidLoad() {
@@ -41,6 +50,20 @@ class ChatViewController: JSQMessagesViewController {
         messages.append(JSQMessage(senderId: "someID", senderDisplayName: "ME", date: Date(), text: "Hello worlds"))
         messages.append(JSQMessage(senderId: "worldID", senderDisplayName: "World", date: Date(), text: "Hi men"))
         messages.append(JSQMessage(senderId: "otherID", senderDisplayName: "Mesrop", date: Date(), text: "Bla bla"))
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navTextAttributes = self.espNavTextAttributes
+        self.espNavTextAttributes =  [
+            NSAttributedStringKey.foregroundColor: UIColor.red,
+            NSAttributedStringKey.font : UIFont.systemFont(ofSize: 24, weight: .light)
+        ]
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.espNavTextAttributes = self.navTextAttributes
     }
     
     // MARK: UITextViewDelegate methods
@@ -105,4 +128,28 @@ extension ChatViewController {
         finishSendingMessage()
     }
 
+}
+
+
+extension UIViewController {
+    
+    var espNavTextAttributes: [NSAttributedStringKey : Any]? {
+        set {
+            if #available(iOS 11.0, *) {
+                    self.navigationController?
+                        .navigationBar
+                        .largeTitleTextAttributes = espNavTextAttributes
+            } else {
+                self.navigationController?.navigationBar.titleTextAttributes = espNavTextAttributes
+            }
+        }
+        get {
+            if #available(iOS 11.0, *) {
+                return self.navigationController?.navigationBar.largeTitleTextAttributes
+            } else {
+               return self.navigationController?.navigationBar.titleTextAttributes
+            }
+        }
+    }
+    
 }

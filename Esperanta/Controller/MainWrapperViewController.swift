@@ -10,6 +10,9 @@ import UIKit
 
 class MainWrapperViewController: UIViewController {
 
+    @IBOutlet weak var coverView: UIView!
+    @IBOutlet weak var mainViewSideConstraintR: NSLayoutConstraint!
+    @IBOutlet weak var mainViewSideConstraint: NSLayoutConstraint!
     @IBOutlet weak var sideViewSideConstraint: NSLayoutConstraint!
     
     weak var sideMenu: SideViewController!
@@ -41,6 +44,15 @@ class MainWrapperViewController: UIViewController {
             self.mainTab = mainTab
         }
     }
+    
+    var sideMenuPosition: CGFloat = 0 {
+        didSet {
+            let value = sideMenuPosition / sideView.bounds.width
+            UIView.animate(withDuration: 0.1) {
+                self.coverView.alpha = value
+            }
+        }
+    }
 
 }
 
@@ -59,8 +71,19 @@ extension MainWrapperViewController {
         let leftEdgePan = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(handleLeftViewEdgePan(recognizer:)))
         leftEdgePan.edges = .left
         view.addGestureRecognizer(leftEdgePan)
-        
-        
+        //add cover view
+        if !UIAccessibilityIsReduceTransparencyEnabled() {
+            coverView.backgroundColor = UIColor.esperantaGray
+            let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.extraLight)
+            let blurEffectView = UIVisualEffectView(effect: blurEffect)
+            //always fill the view
+            blurEffectView.frame = coverView.bounds
+            blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            coverView.addSubview(blurEffectView)
+        } else {
+            coverView.backgroundColor = UIColor.esperantaGray
+        }
+        coverView.alpha = 0.0
     }
     
     //MARK: Side menu
@@ -84,10 +107,13 @@ extension MainWrapperViewController {
         default:
             break
         }
-        sideViewSideConstraint.constant = xConstant
+        //xConstant is touch position in left view
+        sideViewSideConstraint.constant  = xConstant
+        sideMenuPosition = sideView.bounds.width + xConstant
         UIView.animate(withDuration: animationDuration, delay: 0.0, options: .curveEaseOut, animations: {
             self.view.layoutIfNeeded()
         }, completion: nil)
+        
     }
     
     @objc func handleLeftViewEdgePan(recognizer:
@@ -112,21 +138,26 @@ extension MainWrapperViewController {
         default:
             break
         }
+        //xConstant is touch position in left view
         sideViewSideConstraint.constant = xConstant
+        sideMenuPosition = sideView.bounds.width + xConstant
         UIView.animate(withDuration: animationDuration, delay: 0.0, options: .curveEaseOut, animations: {
             self.view.layoutIfNeeded()
         }, completion: nil)
     }
     
     @objc func hideSideMenu(){
+        sideMenuPosition = 0
         isSideMenuHidden = true
         sideViewSideConstraint.constant = -sideView.bounds.width
+        mainViewSideConstraint.constant = 0
         UIView.animate(withDuration: 0.4, delay: 0.0, options: .curveEaseOut, animations: {
             self.view.layoutIfNeeded()
         }, completion: nil)
     }
     
     @objc func showSideMenu(){
+        sideMenuPosition = sideView.bounds.width
         isSideMenuHidden = false
         sideViewSideConstraint.constant = 0
         UIView.animate(withDuration: 0.4, delay: 0.0, options: .curveEaseOut, animations: {

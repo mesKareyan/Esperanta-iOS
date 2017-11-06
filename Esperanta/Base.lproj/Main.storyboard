@@ -27,7 +27,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="loO-sq-F5T">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="116" width="375" height="502"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="QQn-8z-dsY">
                                     <rect key="frame" x="0.0" y="72" width="375" height="44"/>
@@ -214,6 +214,10 @@
                                     <segue destination="Tvb-GF-3N5" kind="embed" identifier="mainTabBar" id="lNm-at-EEA"/>
                                 </connections>
                             </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JoS-9Q-zsr">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZFp-1h-fOR">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="667"/>
                                 <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -228,9 +232,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Z2e-Uy-C0j" secondAttribute="trailing" id="Dug-5b-HD3"/>
+                            <constraint firstItem="JoS-9Q-zsr" firstAttribute="top" secondItem="RNQ-Gs-fFg" secondAttribute="top" id="Q6j-fB-pbI"/>
+                            <constraint firstItem="RNQ-Gs-fFg" firstAttribute="bottom" secondItem="JoS-9Q-zsr" secondAttribute="bottom" id="Rmr-4I-Qql"/>
                             <constraint firstItem="Z2e-Uy-C0j" firstAttribute="top" secondItem="M2F-a2-CsJ" secondAttribute="top" id="Yqb-NW-DQb"/>
+                            <constraint firstItem="JoS-9Q-zsr" firstAttribute="leading" secondItem="RNQ-Gs-fFg" secondAttribute="leading" id="gHZ-Si-Jjf"/>
                             <constraint firstItem="ZFp-1h-fOR" firstAttribute="bottom" secondItem="RNQ-Gs-fFg" secondAttribute="bottom" id="kji-DO-ucs"/>
                             <constraint firstItem="ZFp-1h-fOR" firstAttribute="top" secondItem="M2F-a2-CsJ" secondAttribute="top" id="krd-hn-HJE"/>
+                            <constraint firstItem="RNQ-Gs-fFg" firstAttribute="trailing" secondItem="JoS-9Q-zsr" secondAttribute="trailing" id="mSD-si-tRs"/>
                             <constraint firstItem="Z2e-Uy-C0j" firstAttribute="bottom" secondItem="RNQ-Gs-fFg" secondAttribute="bottom" id="p9a-pm-dAJ"/>
                             <constraint firstItem="Z2e-Uy-C0j" firstAttribute="leading" secondItem="M2F-a2-CsJ" secondAttribute="leading" id="pLw-Tc-x0P"/>
                             <constraint firstItem="ZFp-1h-fOR" firstAttribute="leading" secondItem="RNQ-Gs-fFg" secondAttribute="leading" id="qEf-0n-n9z"/>
@@ -238,7 +246,10 @@
                         <viewLayoutGuide key="safeArea" id="RNQ-Gs-fFg"/>
                     </view>
                     <connections>
+                        <outlet property="coverView" destination="JoS-9Q-zsr" id="dUo-LS-uEy"/>
                         <outlet property="mainView" destination="Z2e-Uy-C0j" id="5ty-Od-JIi"/>
+                        <outlet property="mainViewSideConstraint" destination="pLw-Tc-x0P" id="e9f-YC-t0U"/>
+                        <outlet property="mainViewSideConstraintR" destination="Dug-5b-HD3" id="IVf-Qd-771"/>
                         <outlet property="sideView" destination="ZFp-1h-fOR" id="MeK-PE-TLy"/>
                         <outlet property="sideViewSideConstraint" destination="qEf-0n-n9z" id="epZ-Qw-CH9"/>
                     </connections>
@@ -251,8 +262,8 @@
         <scene sceneID="CsM-OI-upr">
             <objects>
                 <navigationController id="Tvb-GF-3N5" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="97o-Ez-n2B">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="97o-Ez-n2B">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -269,8 +280,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DOo-bc-Jyr" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Me" image="first" id="etq-nk-5YE"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gxy-SB-ZYZ">
-                        <rect key="frame" x="0.0" y="20" width="240" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="gxy-SB-ZYZ">
+                        <rect key="frame" x="0.0" y="20" width="240" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -285,7 +296,7 @@
         <!--Login View Controller-->
         <scene sceneID="8nI-BG-PRP">
             <objects>
-                <viewController id="P0q-es-mnh" customClass="LoginViewController" customModule="UserListApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="P0q-es-mnh" customClass="LoginViewController" customModule="Esperanta" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IOA-47-PHa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -441,7 +452,7 @@
         <!--Email Verify View Controller-->
         <scene sceneID="IYv-ws-0R6">
             <objects>
-                <viewController id="jy5-7N-M3V" customClass="EmailVerifyViewController" customModule="UserListApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jy5-7N-M3V" customClass="EmailVerifyViewController" customModule="Esperanta" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1rZ-m5-lwX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
