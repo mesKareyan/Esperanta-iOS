@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class MainWrapperViewController: UIViewController {
 
@@ -36,7 +37,7 @@ class MainWrapperViewController: UIViewController {
         }
         if identifier == "sideMenu" {
             let sideMenu = (segue.destination as! UINavigationController).viewControllers.first as! SideViewController
-            sideMenu.wrapper = self
+            sideMenu.delegate = self
             self.sideMenu = sideMenu
         } else if identifier == "mainTabBar" {
             let mainTab = (segue.destination as! UINavigationController).viewControllers.first as! MainTabBarController
@@ -177,3 +178,27 @@ extension MainWrapperViewController {
         }
     }
 }
+
+extension MainWrapperViewController: SideMenuDelegate {
+    
+    func menuButtonTapped() {
+        toggleSideMenu()
+    }
+    
+    func signoutButtonTapped() {
+        do {
+            try Auth.auth().signOut()
+            self.dismiss(animated: true, completion: nil)
+        } catch  {
+            print(error)
+        }
+    }
+    
+  
+}
+
+
+
+
+
+

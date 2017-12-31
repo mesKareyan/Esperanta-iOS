@@ -14,7 +14,10 @@ import FirebaseAuth
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var textFieldsBottomConstraint: NSLayoutConstraint!
-    @IBOutlet weak var loginLabel: UILabel!
+    
+        @IBOutlet weak var textFieldsContainer: UIView!
+    var loginLabel: UILabel!
+    @IBOutlet weak var loginLabelBackImage: UIImageView!
     @IBOutlet weak var loginStackView: UIStackView!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var facebookLoginButtonContriner: UIView!
@@ -155,7 +158,8 @@ class LoginViewController: UIViewController {
                 image = #imageLiteral(resourceName: "Unlock")
             }
             let leftImageView = UIImageView(image: image)
-            leftImageView.tintColor =  UIColor.groupTableViewBackground
+            textFiled.tintColor = UIColor.esperantaGreen
+            leftImageView.tintColor =  UIColor.esperantaGreen
             if let size = leftImageView.image?.size {
                 leftImageView.frame = CGRect(x: 0.0,
                                              y: 0.0,
@@ -165,7 +169,7 @@ class LoginViewController: UIViewController {
             leftImageView.contentMode = .center
             textFiled.leftView = leftImageView
             textFiled.leftViewMode = .always
-            textFiled.backgroundColor = UIColor.white.withAlphaComponent(0.2)
+            textFiled.backgroundColor = UIColor.white.withAlphaComponent(0.8)
         }
         //Configure HUD
         APESuperHUD.appearance.backgroundBlurEffect = .light
@@ -173,6 +177,18 @@ class LoginViewController: UIViewController {
         APESuperHUD.appearance.hudSquareSize = 250
         APESuperHUD.appearance.animateInTime = 0.4
         APESuperHUD.appearance.animateOutTime = 1.0
+        //Configure title
+        loginLabel = UILabel(frame: loginLabelBackImage.bounds)
+        loginLabel.text = "Sign In"
+        loginLabel.font = UIFont(name: "Avenir-Heavy", size: 32)
+        loginLabel.textAlignment = .center
+        loginLabelBackImage.addSubview(loginLabel)
+        loginLabelBackImage.mask = loginLabel
+        textFieldsContainer.layer.cornerRadius = 10.0
+        textFieldsContainer.clipsToBounds = true
+        textFieldsContainer.backgroundColor = UIColor.white.withAlphaComponent(0.4)
+        textFieldsContainer.isHidden = true
+    
     }
     
     func addActions() {
@@ -258,6 +274,7 @@ extension LoginViewController: UITextFieldDelegate {
         if let _ = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             textFieldsBottomConstraint.constant = 110
             UIView.animate(withDuration: 0.3, animations: {
+                self.textFieldsContainer.isHidden = false
                 self.view.layoutIfNeeded()
             })
         }
@@ -267,6 +284,7 @@ extension LoginViewController: UITextFieldDelegate {
         if let _ = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             textFieldsBottomConstraint.constant = 8
             UIView.animate(withDuration: 0.3, animations: {
+                self.textFieldsContainer.isHidden = true
                 self.view.layoutIfNeeded()
             })
         }
